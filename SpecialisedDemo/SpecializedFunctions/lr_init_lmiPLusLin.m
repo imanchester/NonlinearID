@@ -1,9 +1,7 @@
 function res = lr_init_lmiPLusLin(res_sos)
 % Use SDP to find a valid initial model.
-% Should probably just find the analytic centre of the constraints, but for
-% now...
 
-% Basically, we just want to choose a parameter vector `theta' such that
+% We want to choose a parameter vector `theta' such that
 % Z = A_lmi*theta + b_lmi >= 0 
 % A_eq*theta = b_eq;
 
