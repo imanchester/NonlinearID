@@ -141,7 +141,10 @@ if verbose; fprintf(' done (%.2f sec).\n',toc(t1)); end;
 
 if verbose; fprintf('\tFinding initial model:'); end;
 t1 = tic;
-res_init = lr_init_lmiPLusLin(res_sos); % used this for the paper
+
+% res_init = lr_init_lmiPLusLin(res_sos); % used this for the paper
+res_init = lr_init_lmiPLusLin_spot(res_sos); % init with spot (one less dependency)
+
 % res_init = lr_init_lmiPLusLin_2(res_sos);
 % res_init = lr_init_simple_lmiPLusLin(pr,e,x,th,res_sos);
 if verbose; fprintf(' %s (%.2f sec).\n',res_init.sol.info,toc(t1)); end;

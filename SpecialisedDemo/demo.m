@@ -68,8 +68,7 @@ spot_monos_e{4} = monomials(x,1:3)';
 spot_monos_f{1} = [u(1) monomials(x,1:3)'];
 spot_monos_f{2} = [u(1) monomials(x,1:3)'];
 spot_monos_f{3} = [u(1) monomials(x,1:3)'];
-% spot_monos_f{4} = [u(1) monomials(x,1:3)'];
-spot_monos_f{4} = [u(1) monomials(x,1:1)'];
+spot_monos_f{4} = [u(1) monomials(x,1:3)'];
 
 
 % Monomials in g

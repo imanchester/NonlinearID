@@ -18,8 +18,16 @@ Mosek
 Available:
 https://www.mosek.com/
 
-Yalmip:
-https://yalmip.github.io/
 
-Something about spotless
+SPOTless
+Available:
+https://github.com/spot-toolbox/spotless
+Notes:
+please replace the following functions from the standard SPOTless repository with the equivalent functions from SpecializedDemo/SpotlessFunctions (i.e. this repository),
+
+1) spotopt/@spotprogsol/spotprogsol - corrects a (possible) bug that expects Gram matrices when none are defined.
+
+2) spotopt/@spotsosprog/spotsosprog - makes the monomial generating function public.
+
+3) @msspoly/msspoly - adds 'prod' functionality for matrices.
 
