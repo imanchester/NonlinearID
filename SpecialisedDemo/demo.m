@@ -230,14 +230,14 @@ for tindex = 1:length(datapoints)
 
 % Report anything interesting:
                 fprintf('\nSimulation error: %.4e\n',se_lr); 
-                fprintf('Time (LR): %.5e\n',res_lr.solvertime)
+                fprintf('Time (LR): %.5e sec\n',res_lr.solvertime)
                 fprintf('Bound (LR): %.9e\n',res_lr.Jf)
 
                 load(s_name_t)
                 rslts.results{rep}.lr{lrm_i} = res_lr;
                 save(s_name_t,'rslts','-v7.3')
 
-                clear rslts res_lr_red ys_lr options_specialized res_lr
+                clear rslts res_lr_red options_specialized res_lr
 
             end
 
@@ -251,5 +251,38 @@ for tindex = 1:length(datapoints)
 end
 
  
+%% Plot the simulated output
+% ...on training data
+
+figure
+plot(tspan,yd)
+hold on
+plot(tspan,ys_lr)
+ylabel('Output')
+xlabel('Time (sec)')
+legend('Training data','LR model')
+grid on
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
