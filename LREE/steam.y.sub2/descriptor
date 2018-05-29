@@ -1,0 +1,20 @@
+(_data_sets 120)
+(_channels 1)
+(_dimensions 115 170 )
+(_data_type unsigned_1)
+(_history extract_d1 steam.4827 /mas/disks/vm10/szummer/.actual/movie/temporal_texture/steam4827.y /mas/disks/vm10/szummer/.actual/movie/temporal_texture/steam4827.br 
+filt3d steam4827.y[10:469/2] /tmp/dat_intermediate -fh /v/users/szummer/tools/image/subsample/subsamplefilter -s 1 1 2
+move /tmp/dat_intermediate[: 2:341] steam4827.y.sub
+filt3d steam4827.y.sub steam4827.y.sub2 -fh /v/users/szummer/tools/image/subsample/subsamplefilter -fv /v/users/szummer/tools/image/subsample/subsamplefilter -s 1 2
+  2
+ )
+(_comment Interpolation with separable filters
+  horizontal: /v/users/szummer/tools/image/subsample/subsamplefilter
+  interpolation factor  h:1 v:1 t:1
+steam4827.y.sub = /tmp/dat_intermediate[: 2:341]
+  on Sun Feb  5 17:18:40 1995
+Interpolation with separable filters
+  horizontal: /v/users/szummer/tools/image/subsample/subsamplefilter
+  vertical: /v/users/szummer/tools/image/subsample/subsamplefilter
+  interpolation factor  h:1 v:1 t:1
+)
